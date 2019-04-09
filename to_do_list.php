@@ -10,6 +10,8 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style2.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     </head>
@@ -22,7 +24,6 @@ session_start();
         </form>
         
         <?php
-
             if(isset($_POST['addedItems'])){
                 if(!(isset($_SESSION['list-items']))){
                     $_SESSION['list-items'] = array();
@@ -49,12 +50,12 @@ session_start();
             if(tickedItem == 0) {
                 $(this).css("text-decoration", "line-through");
                 tickedItem = 1;
-                sessionStorage.setItem(numcheck);
+                sessionStorage.setItem($(this).index(),1);
                 console.log(tickedItem);
             } else {
                 $(this).css("text-decoration", "none");
                 tickedItem = 0;
-                sessionStorage.setItem(numcheck)
+                sessionStorage.setItem($(this).index(),0)
                 console.log(tickedItem);
                 };
 
@@ -65,6 +66,7 @@ session_start();
             }
             })
             });
+            
             
         });
 
