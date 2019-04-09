@@ -22,6 +22,7 @@ session_start();
         </form>
         
         <?php
+
             if(isset($_POST['addedItems'])){
                 if(!(isset($_SESSION['list-items']))){
                     $_SESSION['list-items'] = array();
@@ -48,10 +49,12 @@ session_start();
             if(tickedItem == 0) {
                 $(this).css("text-decoration", "line-through");
                 tickedItem = 1;
+                sessionStorage.setItem(numcheck);
                 console.log(tickedItem);
             } else {
                 $(this).css("text-decoration", "none");
                 tickedItem = 0;
+                sessionStorage.setItem(numcheck)
                 console.log(tickedItem);
                 };
 
@@ -62,7 +65,6 @@ session_start();
             }
             })
             });
-            
             
         });
 
