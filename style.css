@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    height: 600px;
+    margin: auto;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 80px;
+    text-shadow: 3px 3px 4px #444;
+    letter-spacing: -2px;
+}
+
+#tagline {
+    font-size: 17px;
+    font-style: italic;
+}
+
+ul {
+    list-style: none;
+    margin-right: 30px;
+    margin-top: 2px;
+}
+
+li {
+    padding-top: 0.5px;
+    padding-bottom: 0.5px; 
+}
+
+#inputBox {
+    width: 30%;
+}
