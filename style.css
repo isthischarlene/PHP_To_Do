@@ -1,36 +1,68 @@
 body {
     text-align: center;
     font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 0.5px;
     height: 600px;
     margin: auto;
-    background-image: url(https://c.pxhere.com/photos/38/a0/desk_neat_workplace_organized_office_table_work_clean-759747.jpg!d);
+    background-image: url(images/note-7.jpg);
     background-size: cover;
 }
 
-h1 {
-    margin-top: 50px;
+/*----- Heading -----*/
+.heading {
+    margin-top: px;
+    margin-bottom: 0;
+    margin-block-start: 0px;
     font-size: 80px;
     text-shadow: 3px 3px 4px #444;
     letter-spacing: -2px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#tagline {
-    font-size: 17px;
-    font-style: italic;
+/*----- Sub-heading -----*/
+.sub-heading {
+    font-size: 15px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 0;
 }
 
-ul {
-    list-style: none;
-    margin-right: 30px;
-    margin-top: 2px;
+/*----- Text input box -----*/
+
+input[type=text] {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 8px 15px 8px 15px;
+	margin:0px;
+    outline: none;	
+    width: 400px;
 }
 
-li {
-    padding-top: 0.5px;
-    padding-bottom: 0.5px; 
+/*----- "Add" button -----*/
+input[type=submit] {
+	background: #4B99AD;
+	margin-top: 10px;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
 }
 
-#inputBox {
-    width: 30%;
+/*----- Background for list items -----*/
+.displayItem {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 20px 0px 10px 20px;
+	font-size: 15px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
+	opacity: 0.7;
+	text-align: left;
 }
+
+
+
+
