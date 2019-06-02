@@ -9,13 +9,13 @@ session_start();
         <title>To List Application</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Unlock|Vidaloka" rel="stylesheet">
     </head>
-    <body>
+   <body>
        <h1 class="heading">To Do List</h1>
-       <p class="sub-heading"> Helping you stay organised</p>
+       <p class="sub-heading"> ~ Helping you stay organised ~ </p>
        <!-- Form for user to input to-do list items-->
        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
            <input type="text" name="addedItems" class="inputBox" required autofocus>
@@ -51,12 +51,10 @@ session_start();
           $(document).ready(function (){
             //the variable where the clicked items will be stored
            var tickedItem = 0;
-
            //the function that runs when the user clicks on an item
            $("li").click(function (){
                 var numCheck = $(this).index();
                 console.log(numCheck);
-
            //conditonal for if the list item is not initially struckthorugh, then give the list item an in     
            if(tickedItem == 0) {
                $(this).css("text-decoration", "line-through");
@@ -71,7 +69,6 @@ session_start();
                console.log(tickedItem);
                }
              });
-
            //to make sure struckthrough items stay struckthrough after page refresh
            $("li").each(function(i) {
            if (sessionStorage.getItem(i)==1) {
@@ -81,5 +78,5 @@ session_start();
          });
         </script>
 
-    </body>
+   </body>
 </html>
